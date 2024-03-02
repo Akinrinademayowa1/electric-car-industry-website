@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .MAP{
+            background-color:rgb(67, 70, 71) ;
+        
+        }
+        .BODY {
+         background-image: url(car\ 1.jpg); 
+         background-repeat:no-repeat;
+          background-size: cover;
+          height:500px;
+          padding-top: 0px;
+        }
+        .intro{
+                 display:flex;
+                 flex-direction: flex;
+                 flex-direction: row;
+                 padding-top: 10px;
+                 
+                 
+        }
+        .intros{
+            flex:1;
+            border: 5px;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .list{
+            list-style: none;
+             color: rgb(235, 215, 190); 
+             letter-spacing: 3px; 
+             display: flex;
+              flex-direction: row; 
+              word-spacing: 5px; 
+             font-size:16px ;
+             padding-left: 10PX;
+             text-align: center;
+             align-items: center;
+             cursor: pointer;
+             list-style-type: none;
+        }
+        .list :hover{
+              border: 5px;
+              color: white;
+              font-size:18px ;
+        }
+        .text1{
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            word-spacing: 5px;
+            text-align: center;
+            color: white;
+            padding-bottom: 300px;
+            cursor: pointer;
+            padding-left: 250px;
+        }
+        .button{
+            color: white;
+            background-color: rgb(102, 95, 95);
+            border-radius: 25px;
+            border-width: 2PX;
+            width:145px ;
+            height: 46px;
+            padding-right: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+        .button :hover{
+            opacity: 0.6;
+
+        }
+        .sec1{
+            display: flex;
+            flex-direction: row;
+            font-size: 18PX;
+            font-family: 'Courier New', Courier, monospace;
+            padding-right: 100px;
+        }
+        .heading{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color:white;
+            font-weight: 700;
+        }
+        .section1{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            align-items: center;
+            align-content: center;
+        }
+        .sec2{
+            flex:auto;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            font-size: 20px;
+        }
+        .images{
+            height:200px;
+        }
+        .text2{
+            color: black;
+            text-align: center;
+            font-weight: 800;
+
+
+        }
+        /*button type 2 styling*/
+        .button2 {
+    color:black;
+    width:120px;
+    height: 35px;
+    background-color: white;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 5PX;
+}
+.button2 :hover{
+     opacity:0.7;
+}
+.button2 :active{
+    color:white;
+    background-color: gray;
+
+}
+
+/*LOG IN DESIGNS{MODAL FORM}*/
+  /* The Modal (background) */
+  .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color:white;
+  font-size: 35px;
+  font-weight: bold;
+  background-color: #888;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+  font-size: 35px;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+.avatar{
+    height: 220px;
+}
+.message{
+    flex :0.4;
+     text-align: center;
+      padding-left: 200PX; 
+      padding-top: 10PX;
+}
+.msg{
+    height: 100px; 
+    background-color: rgb(56, 54, 54); 
+    color: white;
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+@media screen and (max-width: 650px) {
+  .section1 {
+    width: 100%;
+    display: block;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 650px) {
+  .text1 {
+    font-size: 10px;
+    padding-left: 20px;
+    text-align: center;
+    
+  }
+}
+@media screen and (max-width: 650px) {
+  .intro {
+    font-size: 12px;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .msg{
+    height:50px;
+    
+  }
+  .message{
+    padding-left: 80px;
+    align-items: center;
+  }
+  .button{
+           color: white;
+            border-radius: 15px;
+            border-width: 1PX;
+            width:90px ;
+            height: 30px;
+            padding-right: 5px;
+            font-size: 10px;
+            cursor: pointer;
+            margin-right: 10px;
+  }
+}
+.button2 {
+    color:black;
+    width:90px;
+    height: 25px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    text-align: center;
+    font-size: 13px;
+    border-radius: 5PX;
+}
+
+    </style>
+</head>
+<body class="MAP">
+<DIV class="BODY">
+<div class="intro">
+<div class="intros">
+<p style="color: rgb(235, 215, 190);"> 
+<B style="font-size: 22px;">DRIFT </B> <B style="font-size: 15px; 
+color: rgb(241, 241, 241); font-size: 18px;">MOTORS</B></p>
+<p style="color:white;">looking into the future !!!</p>
+</div>
+
+<div class="intros">
+<ul class="list">
+<a href="ABOUT.HTML" class="list"><li>About</li></a>
+<a href="CONTACT.HTML" class="list"><li>Contact Us</li></a>
+<a href="PRODUCT PAGE.HTML" class="list"><li>Products</li></a>
+</ul>
+</div>
+
+<div class="intros">
+<ul class="list" style="align-content: center; text-align: center;">
+    <button  onclick="document.getElementById('id01').style.display='block' "
+    class="button"> LOG IN </button>
+    
+    
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'"
+  class="close" title="Close Modal">&times;</span>
+  
+    <!-- Modal Content -->
+    <form class="modal-content animate" action="/action_page.php" 
+    style="background-color:rgb(59, 61, 61) ;">
+      <div class="imgcontainer">
+        <img src="PRO3.png" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username"
+         name="uname" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" 
+        name="psw" required>
+  
+        <button type="submit" clsss="button3">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember">
+           Remember me
+        </label>
+      </div>
+  
+      <div class="container" 
+      style="background-color:rgb(59, 61, 61) ;">
+        <button type="button" 
+        onclick="document.getElementById('id01').style.display='none'" 
+        class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a style="list-style-type: none;" 
+          href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+
+
+    <button href="#" class="button">SIGN UP</button>
+    
+</ul>
+</div>
+</div>
+
+    
+<DIV CLASS="">
+<div class="pro1" >
+    <p style="color: rgb(235, 215, 190); text-align: center;" > 
+    <B style="font-size: 45px;">DRIFT </B> <B style="font-size: 25px; 
+        color: rgb(241, 241, 241); font-size: 18px; ">MOTORS</B></p>
+        <div style="display: flex; flex-direction: row;">
+            <div class="sec1">
+                <div class="text1" style="flex: 4; ">
+                            <p><b>#</b>  “to create the most compelling car company<br> of the
+                                 21st century <br>by driving the world's transition to electric vehicles.”</p>
+        </div>
+        <div class="sec1"> <div class="message">
+   <P style="color: wheat; padding-right: 5PX;">MESSAGE BOX:</P>
+<form action="https://formsubmit.co/akinrinaded7@gmail.com.com" method="POST">
+<textarea  class="msg"" placeholder="type complaint here...." input="text">
+</textarea>           
+<button class="button2" action="form-submit.com">SEND</button>
+</form>
+</div>
+    </div>
+        </div>
+</div></div></DIV></DIV>
+</DIV >
+<DIV class="">
+<p> <h4 class="heading">SPECIAL FEATURES</h4></p>
+<DIV CLASS="section1">
+
+    <div class="sec2">
+<p class="text2">Efficient Gear System</p>
+<img src="gear.jpg" class="images"> <img>
+
+    </div>
+
+    <div class="sec2">
+<p class="text2">High Speed Take Off</p>
+<img src="speed.jpg" class="images"> <img>
+
+    </div>
+
+    <div class="sec2">
+<p class="text2"> Auto Drive AI</p>
+<img src="ai.jpg" class="images"> <img>
+
+    </div>
+
+            <div class="sec2">
+                <p class="text2"> Safe Driving</p>
+                <img src="safe.jpg" class="images"> <img>
+                    </div>
+
+</DIV>
+</DIV>
+
+<DIV CLASS="heading">
+    <P>INDUSTRY OVERVIEW</P>
+    <video class="sec2" width="320" height="240"padding-right="30px" 
+    autoplay muted loop
+    src="ovr1 (4).mp4" type="video">
+    </video>
+    <video class="sec2" width="320" height="240"
+    autoplay muted loop
+    src="ovr1 (2).mp4" type="video">
+    </video>
+    <video class="sec2" width="320" height="240" 
+    autoplay muted loop
+    src="ovr1 (3).mp4" type="video">
+  </video>
+  <video class="sec2" width="320" height="240" 
+  autoplay muted loop
+  src="ovr1 (1).mp4" type="video">
+</video>
+    </DIV>
+</body>
+</html>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+    
